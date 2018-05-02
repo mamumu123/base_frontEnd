@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+body #main {
+  background: azure;
+  width: 800px;
+  margin: 0 auto;
+  min-height: 500px;
+  position: relative;
+}
+body #main header {
+  text-align: center;
+  background: aqua;
+  height: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  /*定义粗体字符*/
+}
+body #main container {
+  font-size: 20px;
+  list-style: none;
+  background: bisque;
+}
+body #main container ul li {
+  list-style: none;
+}
+body #main container p {
+  font-size: 15px;
+}
+body #main footer {
+  background: crimson;
+  min-height: 30px;
+}
+/*# sourceMappingURL=index.css.map */

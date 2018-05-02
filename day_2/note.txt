@@ -1,0 +1,97 @@
+1、iframe 内联框架
+frame已经过时  （不能有body）
+frameset  cols="20%,30%,50%"
+	frame src="indexA.html"
+	frame
+没过时：
+<iframe src="" frameborder="0"></iframe>
+最好别用，所有的内存*2，影响速度
+2、
+background-color: greenyellow;
+background: url("../img/a.jpg");
+
+3、实体
+<&lt &gt   " "  >
+
+4、xhtml
+更严格 代码（良好性，完好性）
+必须小写，根元素，必须结束
+
+5、一些改变
+文档声明，字符声明
+省略，boolean(不写是false,写了，空，直接指明都是true)
+
+6、新增的结构元素（section,article，aside,header,hgroup,footer,nav,figure）
+其他：video，audio,ember,mark,progress,meter,,time,ruby,rt,rp,canvas,details,datalist,menu
+新增input:email,number,range,url
+7、全局属性
+contentEditable:是否可编辑
+hidden:所有元素都可以使用  ，不再渲染，但是可以用js改变属性
+designMode:全局属性
+spellcheck:检查错误
+tabindex：第i的元素获得焦点（不使用时-1）
+
+8.新增主体结构元素
+article:文档（可嵌套）
+section:分段（div还行）
+nav:导航（导航，翻页，侧边栏）
+aside:附属信息（引用，侧边栏，广告，导航条）
+time
+<time datetime="2010-10-10">2010-10-10 08:20</time>
+pubdate（属性）：表示发布的时间
+
+9、非主体结构
+header:
+footer:
+hgroup:已经被废除了
+address:联系信息
+10、表单新增元素与属性
+form:直接写属性，就可以添加进去，感觉不要用
+formaction  :添加在input中，一次提交不同页面
+formmethod:同上
+formenctype:上传到服务器，指定编码格式
+enctype="multipart/form-data"      如果是图片，必须这样子
+（multipart/form-data
+        这个是专门用来传输特殊类型数据的，如我们上传的非文本的内容，比如图片或者MP3等。这种编码类型不对字符编码，数据通过二进制的形式传送到服务器端，这时如果用request是无法直接获取到相应表单的值的，而应该通过stream流对象，将传到服务器端的二进制数据解码，从而读取数据。）
+formtarget:
+autofocus:自动获取焦点
+required:非空
+labels:放置文字
+control:用来控制文字后面的input
+placeholder:未输入时默认提示
+list:类似于下拉菜单，指定iD（一会测试）
+AutoComplete:自动输入
+pattern:正则检查
+SelectionDirection：选择方向，感觉没什么用
+indeterminate:（尚未明确是否选择）
+image提交按钮
+
+11、Audio
+	control
+    var a = document.getElementById('audio')
+    let clickAudo = function () {
+        if (a.paused) {
+            a.play()
+        }
+        else {
+            a.pause()
+        }
+    }
+12、video
+属性：  width
+	height
+##多浏览器
+<video controls="controls">
+    <source src="mp/movie.ogg">
+    <source src="./mp/movie.mp4">
+    你的游览器不支持
+</video>
+
+13、拖放 drag  drop
+开始：ondragstart:规定了拖放的数据
+设置数据：setData():设置驼房数据的类型和值
+放入位置：ondragover:规定在何处防止被拖动的数据###阻止系统默认事件：
+放置：ondrag:当被拖方式，会触发事件
+
+14、canvas
+15、本地存储
