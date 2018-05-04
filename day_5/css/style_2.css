@@ -1,0 +1,33 @@
+#main {
+  min-height: 700px;
+}
+#main::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#main span {
+  font-weight: 600;
+}
+#main .r1 {
+  text-align: center;
+  background-color: #65a5fa;
+  float: left;
+  width: 20%;
+  min-height: 700px;
+  height: 100%;
+}
+#main .r1 .p1 {
+  color: honeydew;
+  font-size: 40px;
+  font-weight: 800;
+}
+#main .r2 {
+  float: left;
+  width: 80%;
+}
+#main .r2 .p2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+/*# sourceMappingURL=style_2.css.map */

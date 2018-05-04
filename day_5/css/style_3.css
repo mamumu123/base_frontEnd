@@ -1,0 +1,57 @@
+body,
+div,
+html {
+  margin: 0;
+  padding: 0;
+}
+#main {
+  height: 500px;
+}
+#main::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#main span {
+  font-weight: 600;
+}
+#main .r1 {
+  background: #858585;
+  min-height: 70px;
+}
+#main .r1 .p1 {
+  color: honeydew;
+  font-size: 40px;
+  font-weight: 800;
+}
+#main .r2 {
+  overflow: hidden;
+  background: #d6d6d6;
+  width: 100%;
+  display: inline-block;
+}
+#main .r2 .hang {
+  position: relative;
+}
+#main .r2 .hang::after {
+  content: "";
+  display: block;
+  clear: both;
+  border: 1px solid #d1d1d1;
+}
+#main .r2 .hang .p2 {
+  float: left;
+  width: 20%;
+  font-size: 20px;
+  font-weight: 600;
+  overflow: hidden;
+}
+#main .r2 .hang .right {
+  font-size: 20px;
+  height: 100%;
+  min-height: 100%;
+  background: #fefdff;
+  float: left;
+  width: 80%;
+}
+/*# sourceMappingURL=style_3.css.map */
