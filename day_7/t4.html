@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #fen {
+            display: flex;
+            height: 500px;
+        }
+
+        #main {
+            background: blue;
+            flex:1;
+        }
+
+        #right {
+            flex:0 0 200px;
+            background: aqua;
+
+        }
+
+        #left {
+            flex:0 0 200px;
+            background: bisque;
+            order: -1;
+        }
+    </style>
+</head>
+<body>
+<div id="fen">
+    <div id="main">这是main</div>
+    <div id="left">222</div>
+    <div id="right">333</div>
+</div>
+</body>
+</html>
