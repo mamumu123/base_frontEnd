@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .bg-1 {
+            width: 480px;
+            height: 480px;
+            background: url('css_sprites.png') 0px 0px;
+            transition:background 2s;
+        }
+
+        .bg-2 {
+            width: 480px;
+            height: 480px;
+            background: url('css_sprites.png') 0px 480px;
+        }
+
+        .bg-3 {
+            width: 480px;
+            height: 480px;
+            background: url('css_sprites.png') 0px 960px;
+        }
+
+        .bg-4 {
+            width: 480px;
+            height: 480px;
+            background: url('css_sprites.png') 0px 1440px;
+        }
+
+        .bg-5 {
+            width: 480px;
+            height: 480px;
+            background: url('css_sprites.png') 0px 1920px;
+        }
+
+        .bg-6 {
+            width: 480px;
+            height: 480px;
+            background: url('css_sprites.png') 0px 2400px;
+        }
+
+        .bg-7 {
+            width: 480px;
+            height: 480px;
+            background: url('css_sprites.png') 0px 2880px;
+        }
+    </style>
+</head>
+<body>
+<div class="bg-3" id="di"></div>
+<script>
+    let s=setInterval(function () {
+
+        let obj = document.querySelector('#di');
+        let name = obj.className;
+
+        let num = Number(name.slice(name.length - 1,));
+        let new_num = String(num + 1);
+        if (new_num == '8') {
+            clearInterval(s)
+        }
+        let nextName = name.replace(num, new_num);
+
+        obj.className = nextName
+
+    }, 1000)
+</script>
+</body>
+</html>
